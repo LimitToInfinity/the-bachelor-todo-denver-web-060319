@@ -52,5 +52,5 @@ def get_average_age_for_season(data, season)
     season_age_total += bachelorette[:age].to_f
   end
   avg_season_age = season_age_total / season_ages_array.count
-  avg_season_age.to_i
+  avg_season_age.round
 end

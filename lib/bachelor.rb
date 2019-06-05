@@ -33,15 +33,15 @@ def count_contestants_by_hometown(data, hometown)
 end
 
 def get_occupation(data, hometown)
-  occupation_data = ""
+  occupation_data = []
   data.each do |season, descriptor|
     data[season].each do |bachelorette|
       if bachelorette["hometown"] == hometown
-        occupation_data = bachelorette["occupation"]
+        occupation_data << bachelorette["occupation"]
       end
     end
   end
-  occupation_data
+  occupation_data.first
 end
 
 def get_average_age_for_season(data, season)

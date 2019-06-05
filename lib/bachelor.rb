@@ -45,9 +45,8 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  season_ages_array =[]
+  season_ages_array = []
   season_age_total = 0
-  number_of_contestants = 0
   data[season].each do |bachelorette|
     season_ages_array << bachelorette[:age].to_f
     season_age_total += bachelorette[:age].to_f
